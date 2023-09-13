@@ -12,7 +12,7 @@
 
    <div id='app'>
 
-      <div class="container m-auto text-white">
+      <div class="container m-auto">
          <div class="d-flex my-3 align-items-center">
             <input type="text" v-model="todo" @keyup.enter="addTodo(todo)" class="form-control w-25" placeholder="Add a todo">
             <button @click="addTodo(todo)" class="btn btn-primary mx-3">Aggiungi</button>
@@ -23,13 +23,16 @@
 
          
 
-         <ul v-if="todos.length > 0">
-            <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')" @click="done(todo)">{{todo.text}}
+         <ul v-if="todos.length > 0" class="list-group">
+            <li v-for="(todo, i) in todos" class="d-flex align-items-center list-group-item w-25 justify-content-between">
+               <div :class="(todo.done ? 'text-decoration-line-through' : '')" @click="done(todo)">
+                  {{todo.text}}
+               </div>
                <i class="fa-solid fa-circle-xmark ms-3" @click="deleteTodo(i)"></i>
             </li>
          </ul>
 
-         <p v-else>Free Time!</p>
+         <p v-else class="text-white">Free Time! 🤙🏼</p>
          </div>
       
 
