@@ -12,6 +12,8 @@
 
    <div id='app'>
 
+      <input type="text" v-model="todo">
+      <button @click="addTodo(todo)">Aggiungi</button>
 
       <ul>
          <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}
