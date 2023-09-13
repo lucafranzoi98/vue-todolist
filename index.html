@@ -12,7 +12,7 @@
 
    <div id='app'>
 
-      <input type="text" v-model="todo">
+      <input type="text" v-model="todo" @keyup.enter="addTodo(todo)">
       <button @click="addTodo(todo)">Aggiungi</button>
 
       <div v-if="present">Todo already added</div>
