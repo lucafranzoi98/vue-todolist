@@ -35,7 +35,8 @@ createApp({
          this.present = false; // set to reset the state
          this.empty = false; // set to reset the state
 
-         if (string == "") {
+         // check if input field is empty or with spaces
+         if (string.split(" ").join("") == "") {
 
             this.empty = true;
             // if empty added an element in HTML with v:if="empty"
