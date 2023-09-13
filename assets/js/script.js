@@ -62,12 +62,11 @@ createApp({
 
          // empty input field
          this.todo = "";
+      },
+
+      done(todo){
+         todo.done = !todo.done;
       }
 
    }
 }).mount('#app')
-
-
-
-/* 
-2- cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa) */

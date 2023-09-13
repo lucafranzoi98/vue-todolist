@@ -19,7 +19,7 @@
       <div v-if="empty">Add at least one character</div>
 
       <ul v-if="todos.length > 0">
-         <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}
+         <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')" @click="done(todo)">{{todo.text}}
             <i class="fa-solid fa-circle-xmark" @click="deleteTodo(i)"></i>
          </li>
       </ul>
