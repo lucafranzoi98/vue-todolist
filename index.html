@@ -15,14 +15,16 @@
       <input type="text" v-model="todo">
       <button @click="addTodo(todo)">Aggiungi</button>
 
-      <ul>
+      <div v-if="present">Todo already added</div>
+      <div v-if="empty">Add at least one character</div>
+
+      <ul v-if="todos.length > 0">
          <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}
             <i class="fa-solid fa-circle-xmark" @click="deleteTodo(i)"></i>
          </li>
       </ul>
 
-
-
+      <p v-else>Free Time!</p>
 
 
 	</div>
