@@ -29,7 +29,6 @@ createApp({
    methods: {
       deleteTodo(i) {
          this.todos.splice(i, 1);
-         console.log(this.todos);
       },
 
       addTodo(string){
