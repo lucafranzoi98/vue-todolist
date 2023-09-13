@@ -14,7 +14,9 @@
 
 
       <ul>
-         <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}</li>
+         <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}
+            <i class="fa-solid fa-circle-xmark" @click="deleteTodo(i)"></i>
+         </li>
       </ul>
 
 
