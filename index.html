@@ -13,7 +13,9 @@
    <div id='app'>
 
 
-
+      <ul>
+         <li v-for="(todo, i) in todos" :class="(todo.done ? 'text-decoration-line-through' : '')">{{todo.text}}</li>
+      </ul>
 
 
 
